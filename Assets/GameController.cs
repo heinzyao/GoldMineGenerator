@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour{
     // Use this for initialization
     void Start()
     {
-        Q1();
+        //Q1();
         //Q2();
         //Q3();
     }
@@ -41,27 +41,13 @@ public class GameController : MonoBehaviour{
 
         for (int i = 0; i < 3; i++)
         {
-
-    
-
+       
             x = -7f + 7f * i;
             y = -7f + 7f * i;
             x2 = 7f + -7f * i;
             y2 = -7f + 7f * i;
 
             Instantiate(goldPrefab, new Vector3(x, 0, 0), Quaternion.identity);
-
-        }
-
-
-        for (int i = 0; i < 2; i++)
-        {
-
-            x = -7f + 14f * i;
-            y = -7f + 14f * i;
-            x2 = 7f + -14f * i;
-            y2 = -7f + 14f * i;
-
             Instantiate(goldPrefab, new Vector3(0, y, 0), Quaternion.identity);
             Instantiate(goldPrefab, new Vector3(x, y, 0), Quaternion.identity);
             Instantiate(goldPrefab, new Vector3(x2, y2, 0), Quaternion.identity);
@@ -73,7 +59,6 @@ public class GameController : MonoBehaviour{
     public void Q3()
     {
         int i = 0;
-        int j = 0;
 
         float x;
         float y;
@@ -82,27 +67,18 @@ public class GameController : MonoBehaviour{
 
         while (i < 3)
         {
+
             x = -7f + 7f * i;
             y = -7f + 7f * i;
-       
+            x2 = 7f + -7f * i;
+            y2 = -7f + 7f * i;
+
             Instantiate(goldPrefab, new Vector3(x, 0, 0), Quaternion.identity);
-
-            i = i + 1;
-        }
-
-        while (j < 2)
-        {
-       
-            x = -7f + 14f * j;
-            y = -7f + 14f * j;
-            x2 = 7f + -14f * j;
-            y2 = -7f + 14f * j;
-
             Instantiate(goldPrefab, new Vector3(0, y, 0), Quaternion.identity);
             Instantiate(goldPrefab, new Vector3(x, y, 0), Quaternion.identity);
             Instantiate(goldPrefab, new Vector3(x2, y2, 0), Quaternion.identity);
 
-            j = j + 1;
+            i = i + 1;
         }
     }
 }
